@@ -1,80 +1,69 @@
-/* This is the style sheet for the patientDashboard.html */
-  .card-actions {
-    background-color: #244557;
-    padding: 10px;
-    text-align: center;
-  }
+/* patientDashboard.css */
 
-  .card-actions:hover{
-    background-color: #1c3745;
-  }
-  .ripple-overlay {
+/* Doctor card action area */
+.card-actions {
+    background-color: #015c5d;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-actions:hover {
+    background-color: #003e3e;
+}
+
+/* Ripple effect */
+.ripple {
     position: fixed;
     width: 20px;
     height: 20px;
-    background-color: #1c3745;
     border-radius: 50%;
-    z-index: 9999;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 1s ease-out, opacity 1s ease;
-  }
-  
-  .ripple-overlay.active {
-    transform: translate(-50%, -50%) scale(150);
-    opacity: 1;
-  }
-  
-  .modalApp {
-    position: fixed;
-  bottom: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  background: #fff;
-  padding: 20px;
-  z-index: 10000;
-  transition: bottom 1.5s ease-in;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px 10px 0 0;
-  text-align: center;
-  }
-  
-  .modalApp.active {
-    bottom: 0;
-  }
-  
-  .modalApp h2 {
-    margin-top: 20px;
-  }
-  
-  .modalApp input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 90%;
-    margin-bottom: 40px;
-  }
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
 
-  .modalApp select {
+.ripple.active {
+    transform: scale(50);
+}
+
+/* Booking modal */
+.modalApp {
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    transition: bottom 0.4s ease;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modalApp.active {
+    bottom: 0;
+}
+
+/* Form fields inside booking modal */
+.modalApp input,
+.modalApp select {
     display: block;
+    width: 90%;
     margin: 10px auto;
     padding: 10px;
-    width: 90%;
-    margin-bottom: 40px;
-  }
-  
-  .confirm-booking {
+}
+
+/* Booking confirmation button */
+.modalApp button {
+    display: block;
+    margin: 15px auto;
     padding: 10px 20px;
-    background: #1c3745;
-    color: #fff;
+    background-color: #015c5d;
+    color: white;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
-    
-  
-    
-  }
-  .confirm-booking:hover {
+}
+
+.modalApp button:hover {
     filter: brightness(1.2);
-    background-color: #1c3745;
-  }
-  
+}
