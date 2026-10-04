@@ -32,6 +32,7 @@
                 <input
                     type="text"
                     id="searchBar"
+                    class="searchBar"
                     placeholder="search by doctor name"
                 />
 
@@ -61,12 +62,14 @@
     </div>
 
     <div id="modal" class="modal">
-        <span id="closeModal" class="close">&times;</span>
-        <div id="modal-body"></div>
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
     </div>
 
     <script type="module"
-            src="../js/services/adminDashboard.js"
+            src="../js/adminDashboard.js"
             defer>
     </script>
 

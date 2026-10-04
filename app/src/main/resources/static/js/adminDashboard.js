@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ?.addEventListener("input", filterDoctorsOnChange);
 
     document
-        .getElementById("filterTime")
+        .getElementById("timeFilter")
         ?.addEventListener("change", filterDoctorsOnChange);
 
     document
-        .getElementById("filterSpecialty")
+        .getElementById("specialtyFilter")
         ?.addEventListener("change", filterDoctorsOnChange);
 });
 
@@ -54,8 +54,8 @@ async function loadDoctorCards() {
 async function filterDoctorsOnChange() {
     try {
         let name = document.getElementById("searchBar").value;
-        let time = document.getElementById("filterTime").value;
-        let specialty = document.getElementById("filterSpecialty").value;
+        let time = document.getElementById("timeFilter").value;
+        let specialty = document.getElementById("specialtyFilter").value;
 
         // Normalize empty values
         name = name || null;
@@ -101,11 +101,11 @@ function renderDoctorCards(doctors) {
 
 // Add a new doctor
 window.adminAddDoctor = async function () {
-    const name = document.getElementById("name").value;
-    const specialty = document.getElementById("specialty").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const phone = document.getElementById("phone").value;
+    const name = document.getElementById("doctorName").value;
+    const specialty = document.getElementById("specialization").value;
+    const email = document.getElementById("doctorEmail").value;
+    const password = document.getElementById("doctorPassword").value;
+    const phone = document.getElementById("doctorPhone").value;
 
     const availableTimes = Array.from(
         document.querySelectorAll(
